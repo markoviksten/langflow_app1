@@ -6,6 +6,7 @@ RUN pip install langflow
 
 COPY . .
 
-EXPOSE 7860
+ENV PORT=7860
+EXPOSE $PORT
 
-CMD ["langflow", "run", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["sh", "-c", "langflow run --host 0.0.0.0 --port $PORT"]
