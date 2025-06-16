@@ -2,11 +2,11 @@ services:
   - type: web
     name: langflow
     env: docker
-    region: frankfurt
     plan: free
+    region: frankfurt
     branch: main
+    dockerfilePath: Dockerfile
     autoDeploy: true
-    dockerfilePath: ./Dockerfile
     envVars:
       - key: OPENAI_API_KEY
         sync: false
